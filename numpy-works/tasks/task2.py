@@ -1,6 +1,6 @@
 import numpy as np
 
-productivity = np.array([\
+productivity = np.array([
    # 1  2  3  4  5  6  7  8  9  10
     [8, 7, 8, 6, 7, 8, 9, 8, 7, 8], #employee1 
     [6, 7, 6, 7, 6, 7, 8, 7, 6, 7], #employee2
@@ -9,9 +9,6 @@ productivity = np.array([\
     [7, 8, 7, 8, 7, 8, 7, 8, 7, 8], #employee5
     [8, 9, 8, 9, 8, 9, 8, 9, 8, 9]  #employee6
 ])
-
-# Tasks:
-
 # 1. Calculate the total number of hours worked by each employee over 10 days.
 print(np.sum(productivity,axis=1))
 # 2. Calculate the total work hours for each day across all employees.
@@ -26,16 +23,11 @@ total=np.sum(productivity,axis=1)
 print(total)
 print(np.argmax(total))
 # 6. Identify the employee index who worked the minimum total hours.
-
 print(np.argmin(total))
 # 7. Find the day index with the highest total working hours.
 total_day=np.sum(productivity,axis=1)
 print(np.argmax(total_day))
-
-
-
 # 8. Identify employees who are overworked if average hours exceed 8 per day.
 print(np.where(average>8))
-
 # 9. Calculate the difference between the most productive and least productive employee.
 print(np.max(total)-np.min(total))
